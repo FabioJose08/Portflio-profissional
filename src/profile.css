@@ -1,0 +1,16 @@
+.portrait-frame img,.character-image img{image-rendering:pixelated;filter:none}
+.profile-grid{grid-template-columns:minmax(200px,.74fr) minmax(125px,.42fr) minmax(0,1.55fr);gap:20px}
+.profile-main{grid-column:3}
+.character-sprite-card{position:relative;display:flex;flex-direction:column;min-width:0;padding:8px 6px;background:#15132a;border:1px solid #5147a0;text-align:center;cursor:pointer;transition:border-color .2s,box-shadow .2s}
+.character-sprite-card:hover,.character-sprite-card:focus-visible{border-color:var(--blue);box-shadow:0 0 28px #5c6dff40}
+.sprite-stage{position:relative;display:flex;flex:1;min-height:330px;align-items:center;justify-content:center;overflow:hidden;background:radial-gradient(ellipse at 50% 70%,#35317e,#17142e 72%)}
+.sprite-character{display:block;width:100%;height:100%;max-height:390px;object-fit:contain;image-rendering:pixelated;animation:spriteIdle 2.6s ease-in-out infinite}
+.sprite-speech{position:absolute;left:50%;bottom:25px;max-width:calc(100% - 8px);padding:7px 6px;transform:translate(-50%,8px);opacity:0;background:#f0ebff;color:#23163d;border:1px solid #a78aff;box-shadow:3px 3px #533995;font:8px var(--mono);white-space:nowrap;transition:opacity .16s,transform .16s}
+.character-sprite-card.greeting .sprite-speech{opacity:1;transform:translate(-50%,0)}
+.character-sprite-card.greeting .sprite-character{animation:spriteGreeting .72s steps(2,end) 3}
+.sprite-caption{display:grid;gap:7px;padding:10px 2px 4px;color:#c7b6ff;font:8px var(--mono);letter-spacing:.05em}
+.sprite-caption small{display:flex;justify-content:center;align-items:center;gap:4px;color:#847aa4;font-size:7px}
+@keyframes spriteIdle{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+@keyframes spriteGreeting{0%,100%{transform:translateY(0) rotate(0)}25%{transform:translateY(-12px) rotate(-2deg)}50%{transform:translateY(-4px) rotate(2deg)}75%{transform:translateY(-12px) rotate(-2deg)}}
+@media(max-width:1100px) and (min-width:761px){.profile-grid{grid-template-columns:minmax(170px,.72fr) minmax(112px,.42fr) minmax(0,1.55fr);gap:13px}.sprite-stage{min-height:300px}.character-card{min-height:385px}.character-image{min-height:320px}}
+@media(max-width:760px){.profile-grid{grid-template-columns:1fr;gap:14px}.profile-main{grid-column:auto}.character-sprite-card{width:min(230px,100%);min-height:220px;margin-inline:auto}.sprite-stage{min-height:170px}.sprite-character{max-height:180px}.character-card{min-height:0;height:300px}.character-image{min-height:0}}
