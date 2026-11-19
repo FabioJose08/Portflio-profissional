@@ -27,6 +27,10 @@ O projeto já inclui um workflow em `.github/workflows/deploy.yml` que compila e
 
 O workflow executa `npm ci`, `npm run build` e publica a pasta `dist`. Os caminhos relativos do Vite permitem hospedar o app na raiz do domínio ou em uma URL de projeto do GitHub Pages.
 
+## Ícones do site
+
+Os favicons e ícones para iOS/Android foram derivados da arte de marca fornecida e ficam em `public/favicon.ico`, `public/assets/` e `public/site.webmanifest`.
+
 ## Atualizar conteúdo
 
 - Perfil, redes sociais, projetos, conhecimentos e conquistas: `src/data/profile.ts`.
