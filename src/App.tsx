@@ -4,6 +4,7 @@ import {
   ArrowDown, ArrowLeft, ArrowUpRight, Award, BriefcaseBusiness, Check,
   ChevronRight, Code2, ExternalLink, Gamepad2, Github, GraduationCap,
   Heart, Mail, MapPin, Menu, Moon, Palette, Play, Sigma, Volume2, VolumeX, Workflow,
+  PanelsTopLeft,
 } from 'lucide-react'
 import { achievements, contacts, profile, projects, skills } from './data/profile'
 import type { Project } from './types'
@@ -222,6 +223,9 @@ function SectionHeading({ eyebrow, title, note, compact = false, headingId }: { 
 function PanelTitle({ icon, title, accent }: { icon: ReactNode; title: string; accent?: string }) { return <div className={`panel-title ${accent ?? ''}`}><span>{icon}</span>{title}</div> }
 function InfoRow({ icon, label, value }: { icon: ReactNode; label: string; value: string }) { return <div className="info-row"><span className="info-icon">{icon}</span><span className="info-label">{label}</span><span className="info-value">{value}</span></div> }
 function SkillSymbol({ skill, index }: { skill: (typeof skills)[number]; index: number }) {
+  if (skill.name === 'Lógica de programação') return <Code2 size={18}/>
+  if (skill.name === 'Desenvolvimento de software') return <Workflow size={18}/>
+  if (skill.name === 'Desenvolvimento de interfaces') return <PanelsTopLeft size={18}/>
   if (skill.icon === 'palette') return <Palette size={18}/>
   if (skill.icon === 'math') return <Sigma size={20}/>
   if (skill.icon === 'engineering') return <Workflow size={18}/>
