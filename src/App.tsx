@@ -13,6 +13,12 @@ const navItems = [
   ['conquistas', 'CONQUISTAS'], ['contato', 'CONTATO'],
 ] as const
 
+const projectSymbols: Record<string, string> = {
+  lagoaeletros: 'L',
+  metrorec: 'M',
+  frotarec: 'F',
+}
+
 function App() {
   const [started, setStarted] = useState(false)
   const [active, setActive] = useState('player')
@@ -158,7 +164,7 @@ function App() {
           <div className="section-intro"><p>Projetos que transformam ideias em experiências digitais. Selecione uma missão para ver os detalhes.</p><span className="quest-count">{String(projects.length).padStart(2, '0')} MISSÕES</span></div>
           <div className="project-grid">
             {projects.map((project, index) => <button key={project.id} className="project-card" onClick={() => { playUiSound(); setSelectedProject(project) }}>
-              <div className={`project-art art-${index + 1}`} aria-hidden="true"><span className="art-sigil">{index === 0 ? 'M' : index === 1 ? 'F' : index === 2 ? 'L' : 'A'}</span><span className="art-grid"/><span className="art-index">QUEST {String(index + 1).padStart(2, '0')}</span><span className="art-open"><ArrowUpRight size={18}/></span></div>
+              <div className={`project-art art-${index + 1}`} aria-hidden="true"><span className="art-sigil">{projectSymbols[project.id] ?? 'A'}</span><span className="art-grid"/><span className="art-index">QUEST {String(index + 1).padStart(2, '0')}</span><span className="art-open"><ArrowUpRight size={18}/></span></div>
               <div className="project-copy"><div className="project-meta"><span>{project.category}</span><span className="quest-status">{project.status}</span></div><h3>{project.name}</h3><p>{project.summary}</p><div className="project-foot"><span>ABRIR MISSÃO</span><ChevronRight size={15}/></div></div>
             </button>)}
           </div>

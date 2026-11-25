@@ -22,6 +22,32 @@ export const contacts: ContactConfig = {
 
 export const projects: Project[] = [
   {
+    id: 'lagoaeletros', name: 'LAGOA ELETROS', category: 'E-commerce · Projeto real',
+    summary: 'Aplicação de e-commerce desenvolvida para uma loja real de eletrônicos, com catálogo de produtos, área do cliente e painel administrativo integrado ao Firebase.',
+    description: 'O Lagoa Eletros é uma aplicação web completa desenvolvida para uma loja de eletrônicos de Lagoa do Carro, Pernambuco. O sistema oferece uma experiência para os clientes consultarem produtos, categorias, marcas e promoções, além de disponibilizar uma área administrativa independente para gerenciar o funcionamento da loja. A aplicação conta com integração ao Firebase para autenticação, armazenamento e gerenciamento dos dados, permitindo que as informações administradas sejam refletidas na experiência dos clientes.',
+    objective: 'Desenvolver uma solução digital para modernizar a apresentação da loja e facilitar o gerenciamento de produtos, estoque, promoções e pedidos.',
+    features: [
+      'Catálogo dinâmico de produtos',
+      'Pesquisa, filtros e navegação por categorias',
+      'Cadastro, autenticação e área do cliente',
+      'Carrinho de compras e favoritos',
+      'Painel administrativo independente',
+      'Gerenciamento de produtos, preços, imagens e estoque',
+      'Gerenciamento de categorias e marcas',
+      'Cadastro e controle de promoções',
+      'Gerenciamento e acompanhamento de pedidos',
+      'Integração com Firebase e atualização dos dados da aplicação',
+    ],
+    technologies: [
+      'React', 'TypeScript', 'Vite', 'Tailwind CSS', 'Firebase Authentication',
+      'Cloud Firestore', 'Firebase Storage', 'React Router', 'Firebase Hosting',
+    ],
+    role: 'Desenvolvimento de uma aplicação web para uma loja real, trabalhando na construção das interfaces, organização da experiência do cliente, painel administrativo e integração dos serviços Firebase.',
+    status: 'Concluído',
+    github: 'https://github.com/FabioJose08/Lagoa-eletros',
+    demo: 'https://lagoaeletros.web.app',
+  },
+  {
     id: 'metrorec', name: 'METROREC', category: 'Simulação · Projeto acadêmico',
     summary: 'Uma simulação de transporte ferroviário inspirada na região metropolitana do Recife.',
     description: 'Projeto acadêmico em Python com interface gráfica em Tkinter. Apresenta linhas, estações e simulação de trens, explorando conceitos de programação e sistemas de transporte.',
