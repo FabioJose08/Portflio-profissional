@@ -238,7 +238,7 @@ function ContactCard({ href, label, detail, icon }: { href: string | null; label
 function ProjectDetails({ project, onBack }: { project: Project; onBack: () => void }) {
   return <div className="project-details">
     <div className="details-top"><button className="back-button" onClick={onBack}><ArrowLeft size={16}/> VOLTAR AO QUEST LOG</button><span className="quest-status">{project.status}</span></div>
-    <div className="details-hero"><span className="eyebrow"><i/> QUEST LOG // {project.category}</span><h2 id="project-dialog-title">{project.name}</h2><p>{project.summary}</p></div>
+    <div className="details-hero"><span className="eyebrow"><i/> QUEST LOG // {project.category}</span><h2 id="project-dialog-title">{project.name}</h2><p>{project.detailSummary ?? project.summary}</p></div>
     <div className="details-grid">
       <DetailBlock title="OVERVIEW"><p>{project.description}</p></DetailBlock>
       <DetailBlock title="OBJECTIVES"><p>{project.objective ?? 'Objetivo em atualização.'}</p></DetailBlock>

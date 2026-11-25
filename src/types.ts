@@ -3,6 +3,7 @@ export type Project = {
   name: string
   category: string
   summary: string
+  detailSummary?: string
   description: string
   objective?: string
   features?: string[]

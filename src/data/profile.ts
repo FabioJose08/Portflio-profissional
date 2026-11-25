@@ -22,10 +22,11 @@ export const contacts: ContactConfig = {
 
 export const projects: Project[] = [
   {
-    id: 'lagoaeletros', name: 'LAGOA ELETROS', category: 'E-commerce · Projeto real',
-    summary: 'Aplicação de e-commerce desenvolvida para uma loja real de eletrônicos, com catálogo de produtos, área do cliente e painel administrativo integrado ao Firebase.',
-    description: 'O Lagoa Eletros é uma aplicação web completa desenvolvida para uma loja de eletrônicos de Lagoa do Carro, Pernambuco. O sistema oferece uma experiência para os clientes consultarem produtos, categorias, marcas e promoções, além de disponibilizar uma área administrativa independente para gerenciar o funcionamento da loja. A aplicação conta com integração ao Firebase para autenticação, armazenamento e gerenciamento dos dados, permitindo que as informações administradas sejam refletidas na experiência dos clientes.',
-    objective: 'Desenvolver uma solução digital para modernizar a apresentação da loja e facilitar o gerenciamento de produtos, estoque, promoções e pedidos.',
+    id: 'lagoaeletros', name: 'REVIVA ELETROS', category: 'E-commerce · Projeto real',
+    summary: 'E-commerce especializado em eletrônicos recondicionados, com catálogo de produtos, área do cliente e painel administrativo integrado ao Firebase.',
+    detailSummary: 'Plataforma de e-commerce da Reviva Eletros, especializada em produtos eletrônicos recondicionados, com catálogo digital, área do cliente e painel administrativo integrado ao Firebase.',
+    description: 'Plataforma de e-commerce da Reviva Eletros, especializada em produtos eletrônicos recondicionados, com catálogo digital, área do cliente e painel administrativo integrado ao Firebase.',
+    objective: 'Desenvolver uma solução digital para apresentar e comercializar produtos eletrônicos recondicionados, oferecendo uma experiência de navegação organizada para os clientes e ferramentas administrativas para controlar catálogo, estoque, promoções e pedidos.',
     features: [
       'Catálogo dinâmico de produtos',
       'Pesquisa, filtros e navegação por categorias',
